@@ -1,0 +1,113 @@
+body {background-color: rgb(219, 219, 219);}
+
+#toolbar {
+    display: grid;
+    grid-template-columns: 75px repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    height: 50px;
+  }
+
+  #toolbar a {
+    text-align: center;
+    text-decoration: none;
+    color: #333333;
+    margin-right: 20px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  #toolbar a.active {
+    color: #0087ca;
+  }
+  
+  #home-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border: 2px solid black;
+  }
+
+  #home-icon:hover {
+    cursor: hand;
+  }
+  
+  
+  
+  #footer {
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    background-color: black; 
+    bottom: 0; 
+    left: 0;
+}
+
+#text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    width: 650px;
+    z-index: 2;
+}
+
+#text-container p {
+    color: black;
+    font-size: 22px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+#text-container h1 {
+    color: #333;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-left: 9px;
+    text-decoration: underline;
+}
+
+#hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: 
+  #0087ca;
+  transition: color 0.25s ease-out;
+  }
+
+  #hover-underline-animation:hover {
+    color: #0087ca;
+}
+  
+  #hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 25%;
+    background-color: 
+  #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+   
+  }
+  
+  #hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    
+  }
