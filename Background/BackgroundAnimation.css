@@ -1,0 +1,38 @@
+#image-display {
+  display: flex; /* Change this from block */
+  flex-direction: column; /* Changes the direction of the child elements to be in a column */
+  height: calc(100vh - 50px);
+}
+
+#large-image, #thumbnail-grid {
+  flex: 1;
+}
+
+#large-image {
+  width: 100%;
+  height: 75%;
+}
+
+#thumbnail-grid {
+  display: inline-grid; /* Change this from flex */
+  grid-template-columns: repeat(10, 1fr); /* Creates a grid with 5 columns */
+  grid-auto-rows: minmax(50px, auto); /* Sets a minimum and maximum height for the rows */
+  grid-gap: 5px; /* Adds a gap between the thumbnails */
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#thumbnail-grid img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+
+  
+}
+
+.thumbnail-grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
