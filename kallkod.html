@@ -11,7 +11,7 @@
     <meta charset="utf-8" />
   </head>
 
-  <body>
+  <body style="overflow-y: scroll">
     <div id="toolbar">
       <img src="Home icon.png" id="home-icon" onclick="goHome()" />
       <a href="Om_projektet.html" id="hover-underline-animation"
@@ -24,19 +24,76 @@
       <a href="kallkod.html" id="hover-underline-animation">KÄLLKOD</a>
     </div>
 
-    <div id="code-container">
-      <pre id="code-display"></pre>
-    </div>
     <div id="button-menu">
       <button
-        id="file1-button"
+        id="button 3"
         class="file-button"
-        onclick="fileSelection('C-files/Board.c')"
+        onclick="fileSelection('Main' , this.id)"
       >
-        File 1
+        Main.c
       </button>
-      <button id="file2-button" class="file-button">File 2</button>
-      <button id="file3-button" class="file-button">File 3</button>
+
+      <button
+        id="button 6"
+        class="file-button"
+        onclick="fileSelection('AssemblyNeopixels' , this.id)"
+      >
+        AssemblyNeopixels.s
+      </button>
+
+      <button
+        id="button 2"
+        class="file-button"
+        onclick="fileSelection('ComputerOpponent' , this.id)"
+      >
+        ComputerOpponent.c
+      </button>
+
+      <button
+        id="button 4"
+        class="file-button"
+        onclick="fileSelection('MinimaxAlgo' , this.id)"
+      >
+        MinimaxAlgo.c
+      </button>
+      <button
+        id="button 1"
+        class="file-button"
+        onclick="fileSelection('board' , this.id)"
+      >
+        Board.c
+      </button>
+      <button
+        id="button 5"
+        class="file-button"
+        onclick="fileSelection('NeopixelSignals' , this.id)"
+      >
+        NeopixelSignals.c
+      </button>
+    </div>
+    <div id="code-file-block">
+      <pre id="board" class="code-file" data-src="C-files/board.c"></pre>
+      <pre
+        id="ComputerOpponent"
+        class="code-file"
+        data-src="C-files/ComputerOpponent.c"
+      ></pre>
+      <pre id="Main" class="code-file" data-src="C-files/Main.c"></pre>
+      <pre
+        id="MinimaxAlgo"
+        class="code-file"
+        data-src="C-files/MinimaxAlgo.c"
+      ></pre>
+      <pre
+        id="NeopixelSignals"
+        class="code-file"
+        data-src="C-files/NeopixelSignals.c"
+      ></pre>
+      <pre
+        id="AssemblyNeopixels"
+        class="code-file language-asmatmel"
+        data-src="C-files/AssemblyNeopixels.s"
+      ></pre>
     </div>
   </body>
 </html>

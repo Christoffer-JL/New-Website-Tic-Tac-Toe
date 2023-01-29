@@ -1,10 +1,35 @@
 <html>
   <head>
+    <script src="jQuery/jquery-3.6.3.min.js"></script>
     <link rel="stylesheet" href="looks.css" />
-    <link rel="stylesheet" href="Background/BackgroundAnimation.css" />
+    <link
+      rel="stylesheet"
+      href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css"
+    />
     <script type="text/javascript" src="scripts.js"></script>
+    <script
+      type="text/javascript"
+      src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"
+    ></script>
     <script>
       window.onload = colorChangeOnLoad;
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".readmore-btn").click(function () {
+          var currentButton = $(this);
+          var currentCard = currentButton.closest(".card");
+          var currentImg = currentCard.find(".card-img-top");
+          var currentText = currentCard.find(".card-text-class");
+          var currentBody = currentCard.find(".card-body");
+          currentImg.css("z-index", "1");
+          currentImg.fadeOut();
+
+          currentText.delay(310).fadeIn();
+
+          currentBody.fadeOut();
+        });
+      });
     </script>
     <meta charset="utf-8" />
   </head>
@@ -20,6 +45,205 @@
         >KOPPLINGSSCHEMA</a
       >
       <a href="kallkod.html" id="hover-underline-animation">KÄLLKOD</a>
+    </div>
+    <!-- https://dribbble.com/tags/about_us_page -->
+
+    <div
+      class="text"
+      style="
+        color: black;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-align: justify;
+        margin: 300;
+        margin-top: 25;
+        margin-bottom: 15;
+      "
+    >
+      Nedan kan detaljerad information om vårat Tre-I-Rad projekt hittas. Vi är
+      otroligt stolta över vad vi har åstadkommit med detta projekt och ser fram
+      emot att dela med oss av det. Detta projekt är resultatet av hårt arbete
+      och engagemang från vårt team, och vi hoppas att det denna sida kan
+      erbjuda en god inblick i vårt arbete. Läs vidare för att lära dig mer om
+      vad vi har skapat!
+    </div>
+
+    <div style="margin: 75; margin-top: 5px">
+      <div
+        class="card"
+        style="
+          width: 40rem;
+          height: 40rem;
+          margin: 0 auto;
+          margin-top: 100;
+          float: left;
+        "
+      >
+        <a class="ripple" href="#!">
+          <div>
+            <img
+              alt="Card Image 1"
+              class="img-fluid rounded, card-img-top image-class"
+              src="CardImages/cardImage1.PNG"
+              style="z-index: 1"
+            />
+          </div>
+        </a>
+        <div
+          class="card-text card-text-class"
+          style="height: 465.63px; width: 638px"
+        >
+          <p class="center">
+            Tre-i-rad som spel går ut på att få tre i rad av sin färg. En rad
+            kan vara antingen horisontell, vertikal, eller längs diagonalerna.
+            Den som först får en rad av sina pjäser vinner. <br />
+            Spelare alternerar tur, då den ena använder grön färg och den andra
+            blå färg. Grön börjar alltid först.
+          </p>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Spelets regler</h5>
+          <p>Läs hur man spelar det klassiska spelet tre-i-rad!</p>
+          <button
+            type="button"
+            class="btn btn-success readmore-btn"
+            id="myButton"
+          >
+            Läs mer!
+          </button>
+        </div>
+      </div>
+      <div
+        class="card"
+        style="
+          width: 40rem;
+          height: 40rem;
+          margin: 0 auto;
+          margin-top: 100;
+          float: right;
+        "
+      >
+        <a class="ripple" href="#!">
+          <div>
+            <img
+              alt="Card Image 2"
+              class="img-fluid rounded, card-img-top image-class"
+              src="CardImages/cardImage2.jpg"
+              style="z-index: 1"
+            />
+          </div>
+        </a>
+        <div
+          class="card-text card-text-class"
+          style="height: 465.63px; width: 638px"
+        >
+          <p class="center" style="font-size: 19">
+            Knappsatsen är programmerad för att kunna välja svårighetsgrad,
+            återställning av spelplanen eller lägga ett drag. När någon har
+            vunnit blinkar spelplanen i vinnarens färg. Skulle det inte gå att
+            lägga fler drag kommer spelplanen istället att blinka rött. För att
+            återställa spelet efter ett parti måste reset tryckas ned. En
+            spelare kan välja att istället möta datorn. AIn har svårighetsgrader
+            lätt, mellan och svår att välja mellan. Av dessa ska den lättaste
+            svårighetsgraden inte kunna lägga ett vinnande drag, medan
+            mellan-graden lägger ett slumpmässigt drag. Den allra svåraste
+            använder istället minimax-logik, en beskrivning av detta finns i
+            avsnittet nedan!
+          </p>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Knappsatsen</h5>
+          <p>Läs hur vi har programmerat knappsatsen!</p>
+          <button type="button" class="btn btn-success readmore-btn">
+            Läs mer!
+          </button>
+        </div>
+      </div>
+      <div
+        class="card"
+        style="
+          width: 40rem;
+          height: 40rem;
+          margin: 0 auto;
+          margin-top: 100;
+          float: left;
+        "
+      >
+        <a class="ripple" href="#!">
+          <div>
+            <img
+              alt="Card Image 3"
+              class="img-fluid rounded, card-img-top image-class"
+              src="CardImages/cardImage3.PNG"
+              style="z-index: 1"
+            />
+          </div>
+        </a>
+        <div
+          class="card-text card-text-class"
+          style="height: 465.63px; width: 638px"
+        >
+          <p class="center" style="margin-left: 175">
+            Processor: ATMEGA1284 <br />
+            Knappsats: Grayhill 83BB1-001 <br />
+            Key encoder: MM74C922 <br />
+            J-TAG: ATMEL-ICE <br />
+            Neopixlar: WS2812B <br />
+            Kondensatorer: 0,1µF
+          </p>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Komponenter som användes</h5>
+          <p>Läs vilka komponenter som vi använde!</p>
+          <button type="button" class="btn btn-success readmore-btn">
+            Läs mer!
+          </button>
+        </div>
+      </div>
+      <div
+        class="card"
+        style="
+          width: 40rem;
+          height: 40rem;
+          margin: 0 auto;
+          margin-top: 100;
+          float: right;
+        "
+      >
+        <a class="ripple" href="#!">
+          <div>
+            <img
+              alt="Card Image 4"
+              class="img-fluid rounded, card-img-top image-class"
+              src="CardImages/cardImage4.PNG"
+              style="z-index: 1"
+            />
+          </div>
+        </a>
+        <div
+          class="card-text card-text-class"
+          style="height: 465.63px; width: 638px"
+        >
+          <p class="center">
+            Källkoden för minimax finns under "källkod"-fliken. Algoritmen
+            fungerar på följande sätt:
+            <br />
+            Med hjälp av en rekursiv metod, kollar datorn efter den serie av
+            drag som är en vinnande kombination. Algoritmen är en så kallad
+            minimax-algoritm, som går ut på att minimera risken av förlust och
+            maximera chansen för vinst. Om man väljer att spela mot denna
+            svårighetsgrad så, på grund av tre-i-rad spelets natur, går det inte
+            att vinna.
+          </p>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Minimax</h5>
+          <p>Läs hur vi programmerade den svåraste svårighetsgraden!</p>
+          <button type="button" class="btn btn-success readmore-btn">
+            Läs mer!
+          </button>
+        </div>
+      </div>
     </div>
   </body>
 </html>

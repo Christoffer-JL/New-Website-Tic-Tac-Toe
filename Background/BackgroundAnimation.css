@@ -48,6 +48,10 @@
   
 }
 
+#thumbnail-grid img:hover {
+  transform: scale(1.025);
+}
+
 .thumbnail-grid-item {
   display: flex;
   justify-content: center;
